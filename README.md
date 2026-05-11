@@ -3,6 +3,14 @@
 ### USC CSCI-580: 3D Graphics and Rendering Final Project ###
 
 > This is a proof-of-concept implementation for the Hybrid Rendering using Metal API.
+#### Screenshots ####
+- Stage 1: Rasterization
+![Raster](Raster.png)
+- Stage 2: Ray Tracing
+![Ray Trace](Ray%20Trace.png)
+- Stage 3: Blending & Denoising using MetalFX
+![Hybrid](Hybrid.png)
+> Should expect around 60FPS using Apple M4 chip
 
 #### 1. Goal of this project ####
 - Our goal is to mix rasterization and ray tracing for a better performance and quality.
@@ -10,14 +18,14 @@
 
 #### 2. Project Structure ####
 - This project is divided into 2 separate build targets: CMake for a traditional windowed app for macOS and XCode project for macOS and iOS.
-- The CMake app cannot adjust parameters. By default, it renders at 2560x1440, with Ray Tracing and MetalFX denoiser enabled.
-- The XCode project, reused from Apple's sample code, can adjust parameters like render mode, exposure, and denoiser switch. By default, it renders at 1600x1200, with Ray Tracing and MetalFX denoiser enabled.
+- The CMake app cannot adjust parameters. By default, it renders at `2560x1440`, with Ray Tracing and MetalFX denoiser enabled.
+- The XCode project, reused from Apple's sample code, can adjust parameters like render mode, exposure, and denoiser switch. By default, it renders at `1600x1200`, with Ray Tracing and MetalFX denoiser enabled.
 
 #### 3. Build and Testing ####
 > Since Metal is an Apple-only API, an Apple Silicon-based Mac is required to run this project.
 - XCode developer tools and Metal development pack are required to build this project, but CMake should build the project fine.
 - To build the CMake target, simply use CMakeList.txt to build the project.
-- To build the XCode target, open the XCode project, select the target, and build to run. It may prompt you to sign. Follow the instructions provided by Apple to run locally on mac.
+- To build the XCode target, open the XCode project, select the target, and build to run. It may prompt you to sign. Follow the instructions provided by Apple to run locally on Mac.
 - The iOS build target will require an Apple Developer account to build and run.
 
 #### 4. Real-time Rendering Parameters for XCode Project ####

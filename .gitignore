@@ -30,3 +30,25 @@
 *.exe
 *.out
 *.app
+
+# Build folders
+cmake-build-*/
+build/
+.idea/
+
+# Python virtual environments
+venv/
+.venv/
+
+# Xcode templates/user data
+*.xcodeproj/xcuserdata/
+*.xcodeproj/project.xcworkspace/xcuserdata/
+*.xcuserdatad/
+*.xcuserstate
+
+# OS-specific files
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+Desktop.ini
